@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Posts in reddit</title>
+    </head>
+    <body>
+  <div id="header">
+    <div class="wrapper"> Simple demo of the service</div>
+  </div>
+  <div class="wrapper">
+    <table class="newspaper-a">
+        <thead>
+            <tr><th>Polarity</th><th>Comment</th><th>Score</th></tr>
+        </thead>
+        <tbody>
+        {% for comment in comments %}
+            <tr>
+                <td>{{ comment.polarity }}</td>
+                <td>{{ comment.body }}</td>
+                <td>{{ comment.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}"></style>
+    </body>
+</html>

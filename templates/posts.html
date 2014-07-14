@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Posts in reddit</title>
+    </head>
+    <body>
+  <div id="header">
+    <div class="wrapper"> Simple demo of the service</div>
+  </div>
+  <div class="wrapper">
+    <table class="newspaper-a">
+        <thead>
+            <tr><th>Submission</th><th>Comments</th></tr>
+        </thead>
+        <tbody>
+      {% for submission in submissions %}
+            <tr>
+                <td><a href="{{ url_for("submission", submission_id=submission.id) }}">{{ submission.title }}</a></td>
+                <td>{{ submission.num_comments }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}"></style>
+    </body>
+</html>

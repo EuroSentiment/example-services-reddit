@@ -1,0 +1,85 @@
+#vis text:hover { margin: 0;opacity: .7 !important ; }
+#vis {
+  margin: 0;
+}
+#header {
+  position: relative;
+  min-width: 1100px;
+  width: 100%;
+  padding: 0.5em;
+  color: white;
+  background-color: black;
+  font-family: 'Architects Daughter', cursive;
+}
+#left-bar {
+  float: left;
+}
+.wrapper {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+}
+.newspaper-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 10px;
+	width: 480px;
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #69c;
+}
+.newspaper-a th
+{
+	padding: 12px 17px 12px 17px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #039;
+	border-bottom: 1px dashed #69c;
+}
+.newspaper-a td
+{
+	padding: 7px 17px 7px 17px;
+	color: #669;
+}
+.newspaper-a tbody tr:hover td
+{
+	color: #339;
+	background: #d0dafd;
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('/static/img/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+html, body {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+* {
+ margin:0px;
+ padding:0px;
+}
